@@ -1,0 +1,95 @@
+/* ============================================================
+   portafolio.css
+   Archivo CSS propio para portafolio.html.
+   Contiene estilos específicos para la nueva página solicitada.
+   ============================================================ */
+
+#encabezado-portafolio {
+    background: linear-gradient(135deg, #0d1910, #1b7505);
+}
+
+.menu-portafolio a {
+    min-width: 120px;
+}
+
+.seccion-principal {
+    border-left: 8px solid #1b7505;
+    background-color: #ffffff;
+}
+
+.mensaje-destacado {
+    background-color: #fff8e6;
+    border-left: 5px solid #dba112;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    background-color: #ffffff;
+}
+
+.contenedor-tarjetas h2 {
+    grid-column: 1 / -1;
+}
+
+.tarjeta-portafolio {
+    margin-bottom: 0;
+    border: 1px solid #cccccc;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta-portafolio:hover {
+    transform: translateY(-5px);
+    border-color: #1b7505;
+}
+
+.tarjeta-portafolio img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    background-color: #f4f6f8;
+    padding: 10px;
+}
+
+#tarjeta-html h3,
+#tarjeta-css h3,
+#tarjeta-responsive h3 {
+    color: #1b7505;
+}
+
+.seccion-tabla {
+    border-left: 8px solid #dba112;
+}
+
+.seccion-tabla table {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pie-portafolio {
+    margin-top: 35px;
+}
+
+@media (max-width: 900px) {
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-portafolio a {
+        min-width: 100%;
+    }
+
+    .seccion-tabla {
+        overflow-x: auto;
+    }
+}
